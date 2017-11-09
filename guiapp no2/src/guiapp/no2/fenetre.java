@@ -10,10 +10,14 @@ import javax.swing.*;
      private JPanel pantop = new JPanel();
      private JPanel panmid = new JPanel();
      private JPanel panbot = new JPanel();
+     private JPanel reptop = new JPanel();
+     private JPanel repmid = new JPanel();
+     private JPanel repbot = new JPanel();
+     
      
      //layout
-     private GridLayout layout1 = new GridLayout(3, 1, 10, 10);//pour le panel principal
-     private GridLayout layout2 = new GridLayout(2, 5, 0, 0);//pour les 3 panels top mid et bot
+     private GridLayout layout1 = new GridLayout(6, 1, 0, 0);//pour le panel principal
+     private GridLayout layout2 = new GridLayout(1, 5, 0, 0);//pour les 3 panels top mid et bot
      
      //label
      private JLabel km = new JLabel("kilometre");
@@ -48,12 +52,16 @@ import javax.swing.*;
         panel.setLayout(layout1);
         
         panel.add(pantop);
+        panel.add(reptop);
         panel.add(panmid);
+        panel.add(repmid);
         panel.add(panbot);
+        panel.add(repbot);
+        
         
         //level 2
         pantop.setBackground(Color.BLUE);
-        pantop.setLayout(layout2);
+        pantop.setLayout(layout2); 
         panmid.setBackground(Color.yellow);
         panmid.setLayout(layout2);
         panbot.setBackground(Color.red);
@@ -64,7 +72,6 @@ import javax.swing.*;
         pantop.add(convtop);
         pantop.add(champmi);
         pantop.add(mi);
-        pantop.add(test);
         //mid
         panmid.add(m);
         panmid.add(champm);
